@@ -46,6 +46,7 @@ html{
     /* font-size: 10px; */
     /* 10px / 16px = 0.625 = 62.5*/
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body{
@@ -53,6 +54,9 @@ body{
     line-height: 1;
     font-weight: 400;
     color: #555;
+
+    /* Only works if there is nothing absolute */
+    overflow-x: hidden;
 }
 
 
@@ -89,9 +93,9 @@ body{
     grid-template-columns: repeat(4 ,1fr);
 }
 
-.grid---5-cols{
+/* .grid---5-cols{
     grid-template-columns: repeat(5 ,1fr);
-}
+} */
 .grid--center-v{
     align-items: center;
 }
@@ -247,6 +251,30 @@ body{
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active{
     background-color: #cf711f;
+}
+
+/* Mobile */
+.btn-mobile-nav{
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    display: none;
+}
+
+.icon-mobile-nav{
+    height: 4.8rem;
+    width: 4.8rem; 
+    color: #333;
+}
+
+/*  <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+                <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+ */
+
+.icon-mobile-nav[name="close-outline"]{
+    display: none;
+
 }
 
 /* ************************************ */
@@ -480,6 +508,7 @@ strong{
     display: flex;
     align-items: center;
     gap: 1.6rem; 
+    line-height: 1.2;
 }
 .list-icon{
     width: 3rem;
